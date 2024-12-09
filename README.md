@@ -14,15 +14,15 @@ You'll see output like this:
 ```
 Running with fields: `str: String`
 
-***** Fields: (str)
+***** Fields: test(str)
 
 
 Running with fields: `str: String, int: Int`
 
-***** Fields: (str)
+***** Fields: test(str)
 ```
 
-The second `***** Fields` line *should* say `***** Fields: (str,int)`, but the `Mirror` still reported that
+The second `***** Fields` line *should* say `***** Fields: test(str, int)`, but the `Mirror` still reported that
 `MirroredElemLabels` was just `(str)`.
 
 ## Reproduce manually

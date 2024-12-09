@@ -17,12 +17,22 @@ function writeFile() {
 
 function run() {
   writeFile "$1"
+
   echo -e '\nRunning with fields: `'$1'`'
-  sbt -warn -Dsbt.supershell=false run
+
+  sbtCmds=''
+
+  if [ "$2" = 1 ]; then
+    sbtCmds="$sbtCmds; clean"
+  fi
+
+  sbtCmds="$sbtCmds; run"
+
+  sbt -warn -Dsbt.supershell=false "$sbtCmds"
 }
 
 initFields='str: String'
 
-run "$initFields"
+run "$initFields" 1
 run "$initFields, int: Int"
 writeFile "$initFields"
