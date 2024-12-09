@@ -13,12 +13,9 @@ You'll see output like this:
 
 ```
 Running with fields: `str: String`
-
 ***** Fields: test(str)
 
-
 Running with fields: `str: String, int: Int`
-
 ***** Fields: test(str)
 ```
 
